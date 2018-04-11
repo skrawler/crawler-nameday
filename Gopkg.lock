@@ -35,7 +35,7 @@
   branch = "master"
   name = "github.com/skrawler/go-natural"
   packages = ["."]
-  revision = "f0ca7f1782ae124bbb9f09e36522ae5e88861380"
+  revision = "a971f644b1b86b41499302f873e078c985438921"
 
 [[projects]]
   name = "github.com/stretchr/testify"
