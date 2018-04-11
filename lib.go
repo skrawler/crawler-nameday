@@ -153,8 +153,20 @@ func ExtractNamedaysDagensnamn(s string) ([]Nameday, error) {
 		if len(parts) > 2 && parts[2] == "(inofficiell)" {
 			current.Official = false
 		}
-		//fmt.Println("Found", current)
-		matches = append(matches, current)
+		// skip dupes
+		dupe := false
+		for _, match := range matches {
+			if match.Name == current.Name {
+				dupe = true
+				if (match.Official || current.Official) && match.Date != current.Date {
+					log.Println("dupe with odd date found:", match.Name, match.Date, current.Date)
+				}
+				break
+			}
+		}
+		if !dupe {
+			matches = append(matches, current)
+		}
 	}
 	return matches, nil
 }

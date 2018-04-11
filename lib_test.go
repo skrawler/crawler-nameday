@@ -21,10 +21,6 @@ func TestSweNamesOnDate(t *testing.T) {
 		{Name: "Leon", Date: natural.NewMonthDay("12-15"), Official: false},
 		{Name: "Leona", Date: natural.NewMonthDay("12-15"), Official: false},
 		{Name: "Levina", Date: natural.NewMonthDay("12-15"), Official: false},
-		{Name: "Gottfrid", Date: natural.NewMonthDay("12-15"), Official: true},
-		{Name: "Leona", Date: natural.NewMonthDay("12-15"), Official: false},
-		{Name: "Leon", Date: natural.NewMonthDay("12-15"), Official: false},
-		{Name: "Levina", Date: natural.NewMonthDay("12-15"), Official: false},
 	}, list)
 }
 
